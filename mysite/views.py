@@ -3,7 +3,7 @@ import random
 
 # Create your views here.
 def home(request):
-    sentence = ['random1', 'random2', 'random3']
+    sentence = ['Random '+str(i) for i in range(50)]
     return render(request, 'index.html', {
         'sentence': random.choice(sentence),
     })
